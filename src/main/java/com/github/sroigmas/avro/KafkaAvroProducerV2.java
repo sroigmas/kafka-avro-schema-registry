@@ -27,8 +27,8 @@ public class KafkaAvroProducerV2 {
         .setAge(26)
         .setHeight(185.5f)
         .setWeight(85.6f)
-        .setPhoneNumber("123-456-7890")
-        .setEmail("john.doe@gmail.com")
+        //.setPhoneNumber("123-456-7890")
+        //.setEmail("john.doe@gmail.com")
         .build();
 
     ProducerRecord<String, Customer> producerRecord = new ProducerRecord<>(topic,
