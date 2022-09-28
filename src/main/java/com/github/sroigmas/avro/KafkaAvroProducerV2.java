@@ -8,7 +8,7 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-public class KafkaAvroProducerV1 {
+public class KafkaAvroProducerV2 {
 
   public static void main(String[] args) {
     Properties properties = new Properties();
@@ -27,7 +27,8 @@ public class KafkaAvroProducerV1 {
         .setAge(26)
         .setHeight(185.5f)
         .setWeight(85.6f)
-        //.setAutomatedEmail(false)
+        .setPhoneNumber("123-456-7890")
+        .setEmail("john.doe@gmail.com")
         .build();
 
     ProducerRecord<String, Customer> producerRecord = new ProducerRecord<>(topic,
